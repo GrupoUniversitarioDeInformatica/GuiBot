@@ -74,19 +74,7 @@ def source_handler(message: telebot.types.Message) -> None:
 def license_handler(message: telebot.types.Message) -> None: 
     bot.send_message(
         message.chat.id,
-        r"""
-            GuiBot - Telegram bot to manage the meeting documents of Universidad
-            de Valladolid's Grupo Universitario de Informática (GUI).
-            Copyright (C) 2024  Obi-Juan-NoSeEnoje17\n\n
-            This program is free software: you can redistribute it and/or modify
-            it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or
-            (at your option) any later version.\n\n
-            This program is distributed in the hope that it will be useful,
-            but WITHOUT ANY WARRANTY; without even the implied warranty of
-            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-            GNU Affero General Public License for more details.\n\n
-            You should have received a copy of the GNU Affero General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
-        """,
+        "GuiBot - Telegram bot to manage the meeting documents of Universidad de Valladolid's Grupo Universitario de Informática (GUI). Copyright (C) 2024  Obi-Juan-NoSeEnoje17\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.\n\nYou will find our full license on our repository. Execute /source to get out repo link",
         message_thread_id=message.message_thread_id
     )
 

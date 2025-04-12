@@ -19,7 +19,7 @@ COMMANDS_INFO: Dict[str, str] = {
     " - tipo_reunión: 'Junta' o 'Asamblea'.",
     
     "add": "/add tipo_reunión punto_del_día\n"
-    "Añade un punto del día con su descripción. \n"
+    "Añade un punto del día.\n"
     "Argumentos: \n"
     " - tipo_reunión: 'Junta' o 'Asamblea'. \n"
     " - punto_del_día: Título del punto del día a añadir. \n",
@@ -40,7 +40,7 @@ COMMANDS_INFO: Dict[str, str] = {
     "Añade o edita la descripción del punto del día \n"
     "Argumentos: \n"
     " - tipo_reunión: 'Junta' o 'Asamblea'. \n"
-    " - punto_del_día: Número del punto del día a ver su descripción. \n"
+    " - punto_del_día: Número del punto del día a editar su descripción. \n"
     " - nueva_descripción: Descripción del punto del día.",
     
     "rm": "/rm tipo_reunión punto_del_día \n"
