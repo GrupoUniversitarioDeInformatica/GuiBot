@@ -1,0 +1,4 @@
+Refactor de TODO el código
+Cambio en la forma que add y edit funcionan
+/help add y /help list para ver nuevo comportamiento
+Ahora en código debería ser mas sostenible y ampliable a futuro.

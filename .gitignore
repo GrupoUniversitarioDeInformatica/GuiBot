@@ -1,7 +1,9 @@
 .env
 __pycache__/
-GuiBotVenv/
-src/utils/logs/error.log
+.venv/
+.mypy_cache/
+
+src/utils/logs/*
+
 src/meeting_files/
-src/tex_files/
-src/whitelist.txt
+tex_files/

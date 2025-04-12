@@ -1,50 +1,38 @@
-'''
-GuiBot - Telegram bot to manage the meeting documents of Universidad
-de Valladolid's Grupo Universitario de Informática (GUI).
-Copyright (C) 2024  Obi-Juan-NoSeEnoje17
+def format_date_date(date: str) -> str:
+    date_splited: list[str] = date.split("-")
+    return f"{date_splited[0]} {date_splited[1]} {date_splited[2]}"
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+def format_date_title(date: str) -> str:
+    date_splited: list[str] = date.split("-")
+    return f"{date_splited[2]} {date_splited[1]} {date_splited[0]}"
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-'''
-def split_command(message_text, delimiter=None):
-    return message_text.split(delimiter)
 
-def format_date_date(date):
-    day = date.split("-")[0]
-    month = date.split("-")[1]
-    year = date.split("-")[2]
-    return day + " " + month + " " + year
-
-def format_date_title(date):
-    day = date.split("-")[0]
-    month = date.split("-")[1]
-    year = date.split("-")[2]
-    return year + "-" + month + "-" + day
-
-def check_date(date):
+def check_date(date: str) -> bool:
     return len(date.split("-")) != 3
 
-def points_of_day(type):
-    latex_content = ""
-    with open ('src/meeting_files/points_of_day_' + type + '.txt', 'r') as points_of_day_read:
+
+def points_of_day(type: str) -> str:
+    latex_content: str = ""
+    with open(
+        "src/meeting_files/points_of_day_" + type + ".txt", "r"
+    ) as points_of_day_read:
         for point_of_day in points_of_day_read:
             title = point_of_day.strip().split(":")[0]
             desc = point_of_day.strip().split(": ")[1]
-            latex_content = latex_content + "        \\subsection{" + title + "}\n            " + desc + "\n"
+            latex_content = (
+                latex_content
+                + "        \\subsection{"
+                + title
+                + "}\n            "
+                + desc
+                + "\n"
+            )
     return latex_content
 
+
 def create_latex_content(type, date):
-    latex_content = fr"""
+    latex_content = rf"""
     \documentclass{{article}}
     \usepackage[utf8]{{inputenc}}
     \usepackage[utf8]{{inputenc}}

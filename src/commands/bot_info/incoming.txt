@@ -1,0 +1,4 @@
+Juntar GUIBOT con KEYBOT
+Añadir seguridad
+Mejorar código
+Añadir frase aleatorio jeje
